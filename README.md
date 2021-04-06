@@ -50,12 +50,12 @@ There are two possible ways to submit your project. Your instructor should have 
 
 - If the _post_ with the specified `id` is not found:
 
-  - return HTTP status code `404` (Not Found).
-  - return the following JSON: `{ message: "The post with the specified ID does not exist" }`.
+  [x] return HTTP status code `404` (Not Found).
+  [x] return the following JSON: `{ message: "The post with the specified ID does not exist" }`.
 
 - If there's an error in retrieving the _post_ from the database:
-  - respond with HTTP status code `500`.
-  - return the following JSON: `{ message: "The post information could not be retrieved" }`.
+  [x] respond with HTTP status code `500`.
+  [x] return the following JSON: `{ message: "The post information could not be retrieved" }`.
 
 #### 3 [POST] /api/posts
 
