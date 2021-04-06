@@ -86,14 +86,14 @@ router.delete('/:id', (req, res) => {
 });
 
 router.get('/:id/comments', (req, res) => {
-	Post.findCommentById(req.params.id)
+	Post.findPostComments(req.params.id)
 		.then((comments) => {
-			if (comments.length > 0) {
-				// res.status(200).json(res.body);
-			} else {
+			if (!comments) {
 				res
 					.status(404)
-					.status({ message: 'The post with the specified ID does not exist' });
+					.json({ message: 'The post with the specified ID does not exist' });
+			} else {
+				res.status(200).json(comments);
 			}
 		})
 		.catch(() => {
