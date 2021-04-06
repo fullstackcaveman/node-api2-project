@@ -43,8 +43,8 @@ There are two possible ways to submit your project. Your instructor should have 
 #### 1 [GET] /api/posts
 
 - If there's an error in retrieving the _posts_ from the database:
-  - respond with HTTP status code `500`.
-  - return the following JSON: `{ message: "The posts information could not be retrieved" }`.
+  [x] respond with HTTP status code `500`.
+  [x] return the following JSON: `{ message: "The posts information could not be retrieved" }`.
 
 #### 2 [GET] /api/posts/:id
 
