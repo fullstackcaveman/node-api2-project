@@ -79,7 +79,9 @@ router.put('/:id', (req, res) => {
 				}
 			})
 			.then((post) => {
-				res.status(200).json(post);
+				if (post) {
+					res.status(200).json(post);
+				}
 			})
 			.catch(() => {
 				res
